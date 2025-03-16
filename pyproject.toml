@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "inspect_evals_dashboard_schema"
+version = "0.1.0"
+description = "Shared schema definitions for inspect_evals_dashboard and inspect_evals_scoring"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "ArcadiaImpact" }
+]
+
+[project.urls]
+Homepage = "https://github.com/ArcadiaImpact/inspect_evals_dashboard_schema"
+Repository = "https://github.com/ArcadiaImpact/inspect_evals_dashboard_schema.git"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["inspect_evals_dashboard_schema"]
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = [
+    "tests",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ruff",
+    "pytest",
+]
+
+[tool.ruff.lint]
+select = [
+    "E",      # pycodestyle errors
+    "W",      # pycodestyle warnings
+    "F",      # flake8
+    "D",      # pydocstyle
+    "I",      # isort
+    "SIM101", # duplicate isinstance
+    "UP038",  # non-pep604-isinstance
+    # "RET", # flake8-return
+    "RUF", # ruff rules
+]
+ignore = [
+    "E203",  # whitespace-before-punctuation
+    "E501",  # line-too-long
+    "D10",  # undocumented-{anything}
+    "D200",  # unnecessary-multiline-docstring
+    "D205",  # missing-blank-line-after-summary
+    "D212",  # multi-line-summary-first-line
+    "D415",  # missing-terminal-punctuation
+]
