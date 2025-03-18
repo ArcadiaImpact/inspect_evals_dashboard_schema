@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "inspect_evals_dashboard_schema"
-version = "0.1.0"
+version = "0.1.1"
 description = "Shared schema definitions for inspect_evals_dashboard and inspect_evals_scoring"
 readme = "README.md"
 requires-python = ">=3.10"
