@@ -1,5 +1,5 @@
 from datetime import date
-from typing import Any
+from typing import Any, Optional
 
 from inspect_ai.log import (
     EvalPlan,
@@ -42,9 +42,7 @@ class DashboardLog(BaseModel):
     plan: EvalPlan
     results: EvalResults
     stats: EvalStats
-    # error: EvalError  # ?
-    # samples: list[EvalSample]
-    reductions: list[EvalSampleReductions]
+    reductions: Optional[list[EvalSampleReductions]] = None
     location: str
     eval: EvalSpec
     eval_metadata: EvalMetadata
