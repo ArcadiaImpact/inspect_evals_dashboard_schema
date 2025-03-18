@@ -38,7 +38,7 @@ class ModelMetadata(BaseModel):
 
 
 class DashboardLog(BaseModel):
-    schema_version: str = "1.0"
+    schema_version: str = "1.1"
     plan: EvalPlan
     results: EvalResults
     stats: EvalStats
